@@ -13,6 +13,16 @@ public class Main {
         System.out.println(fibo);
         return fibo;
     }
+    public static String szyfrCezara(String slowo, int klucz){
+        String alfabet = "abcdefghijklmnopqrstuvwxyz";
+        String alfabetPrzesuniety = alfabet.substring(klucz)+alfabet.substring(0,klucz);
+        String szyfr = "";
+        for (int i = 0; i <slowo.length() ; i++) {
+            szyfr = szyfr+alfabetPrzesuniety.charAt(i);
+
+        }
+        return szyfr;
+    }
     public static Integer wyszukiwanieBinarne(ArrayList<Integer> ListaDoWyszukiwaniaBina,
                                               int szukana){
         int liczba =0;
@@ -68,5 +78,6 @@ public class Main {
         System.out.println(wyszukiwanieBinarne(fibki, 54));
         System.out.println(czyPalindrom("kajak"));
         System.out.println(liczbaPalindromiczna(790));
+        System.out.println(szyfrCezara("abc",3));
     }
 }
