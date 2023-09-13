@@ -20,7 +20,7 @@ public class Main {
         int koniec = ListaDoWyszukiwaniaBina.size()-1;
         while (koniec - poczatek>1){
         int srodek = (poczatek+koniec)/2;
-        if (ListaDoWyszukiwaniaBina.get(srodek)>szukana){
+        if (ListaDoWyszukiwaniaBina.get(srodek)>=szukana){
             koniec = srodek;
         }
         else {
@@ -37,6 +37,9 @@ public class Main {
         }
         return liczba;
     }
+    //public static boolean czyPalindrom(String slowo){
+
+    //}
 
     public static void main(String[] args) {
         System.out.println("Hello world!");
