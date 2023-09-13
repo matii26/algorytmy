@@ -50,11 +50,23 @@ public class Main {
             return false;
         }
     }
+    public static Integer liczbaPalindromiczna(Integer liczba){
+        Integer pomoc = liczba;
+        Integer pomoc2 = liczba;
+        while (!czyPalindrom(liczba.toString())){
+            liczba++;
+        }
 
+        while (!czyPalindrom(pomoc2.toString())){
+            pomoc2--;
+        }
+        return liczba - pomoc > pomoc - pomoc2 ? pomoc2: liczba;
+    }
     public static void main(String[] args) {
         System.out.println("Hello world!");
         ArrayList<Integer>fibki = fibonacci();
         System.out.println(wyszukiwanieBinarne(fibki, 54));
         System.out.println(czyPalindrom("kajak"));
+        System.out.println(liczbaPalindromiczna(790));
     }
 }
