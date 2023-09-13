@@ -37,13 +37,24 @@ public class Main {
         }
         return liczba;
     }
-    //public static boolean czyPalindrom(String slowo){
+    public static boolean czyPalindrom(String slowo){
+        String slowoOdKonca = "";
+        for (int i = 0; i <slowo.length() ; i++) {
+            slowoOdKonca = slowo.charAt(i)+slowoOdKonca;
 
-    //}
+        }
+        if (slowo.equals(slowoOdKonca)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 
     public static void main(String[] args) {
         System.out.println("Hello world!");
         ArrayList<Integer>fibki = fibonacci();
         System.out.println(wyszukiwanieBinarne(fibki, 54));
+        System.out.println(czyPalindrom("kajak"));
     }
 }
